@@ -1,5 +1,7 @@
 FROM thimico/jre7
-RUN wget -q http://nilhcem.github.com/FakeSMTP/downloads/fakeSMTP-latest.zip && unzip fakeSMTP-latest.zip -d /opt && rm fakeSMTP-latest.zip
+
+ADD fakeSMTP-2.0.jar /opt
+
 EXPOSE 25
 VOLUME ["/var/mail"]
 
